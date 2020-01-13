@@ -1,0 +1,15 @@
+namespace PaketLoadScripts
+
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/Fake.Core.Environment.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/Fake.Core.Process.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/Fake.Core.SemVer.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/Fake.Core.String.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/Fake.Core.Tasks.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/Fake.Core.Trace.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/Fake.Core.Xml.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/Fake.IO.FileSystem.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/Fake.Net.Http.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/Newtonsoft.Json.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/NuGet.Protocol.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/System.Net.Http.fsx" 
+#r "/home/rmunn/.nuget/packages/fake.dotnet.nuget/5.19.0/lib/netstandard2.0/Fake.DotNet.NuGet.dll" 

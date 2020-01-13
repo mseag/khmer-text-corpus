@@ -1,0 +1,15 @@
+namespace PaketLoadScripts
+
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/Microsoft.Build.Framework.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/Microsoft.Build.Utilities.Core.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/Microsoft.Win32.Registry.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/System.CodeDom.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/System.Collections.Immutable.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/System.Linq.Parallel.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/System.Net.Http.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/System.Reflection.Metadata.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/System.Reflection.TypeExtensions.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/System.Resources.Extensions.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/System.Resources.Writer.fsx" 
+#load "/home/rmunn/code/mseag/khmer/.paket/load/netcoreapp3.0/Build/System.Threading.Tasks.Dataflow.fsx" 
+#r "/home/rmunn/.nuget/packages/microsoft.build.tasks.core/16.3.0/lib/netstandard2.0/Microsoft.Build.Tasks.Core.dll" 
