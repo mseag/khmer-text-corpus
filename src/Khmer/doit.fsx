@@ -13,14 +13,17 @@ let dateTimePattern s =
 
 let pattern = dateTimePattern "ddd MMM dd yyyy HH':'mm':'ss o<G>"
 
-let nbsp = '\u200b'
-let nbsp2 = "\u200b\u200b"  // Some dates have double NSBPs in them
+let zws = "\u200b"  // U+200B ZERO WIDTH SPACE
+let zws2 = "\u200b\u200b"  // Some dates have double ZWSs in them
+
+let zwsRegex = "\u200b{2,}" |> System.Text.RegularExpressions.Regex
+let fixZws s = zwsRegex.Replace(s, zws)
 
 let tryParseDate (s : string) =
     let parseResult =
         // All times in the data are in Indochina time, so we can simplify our data conversion by assuming that timezone
         // We also change "GMT+0700" to "+07:00" since that's the format that NodaTime expects for offsets
-        s.Replace(nbsp2, " ").Replace(nbsp, ' ').Replace("GMT + 0700 ( Indochina Time ) ", "+07:00")
+        s.Replace(zws2, " ").Replace(zws, " ").Replace("GMT + 0700 ( Indochina Time ) ", "+07:00")
         |> pattern.Parse
     if parseResult.Success then Some parseResult.Value else None
 
@@ -39,9 +42,9 @@ let outputArticleIfValid (maybeArticle : Article option) =
     match maybeArticle with
     | None -> ()
     | Some article ->
-        printfn "\\ti %s" article.headline
+        printfn "\\ti %s" (article.headline |> fixZws)
         printfn "\\co %s" (article.date.ToString("uuuu'-'MM'-'dd'T'HH':'mm':'sso<m>", invariantDateTimeFormat))
-        printfn "\\tx %s" article.article
+        printfn "\\tx %s" (article.article |> fixZws)
 
 // Don't warn about incomplete matches on "let [|headline; dateLine; article|] = lines" below,
 // since Seq.windowed guarantees that the returned arrays will contain exactly 3 items each time

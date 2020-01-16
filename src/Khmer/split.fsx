@@ -5,7 +5,6 @@ let LINE_SPLITS = SPLIT_INTO * 3
 let args = fsi.CommandLineArgs |> Array.skip 1 // We don't care about the name of our script
 let filename = if args.Length > 0 then args.[0] else "all-output.txt"
 
-// for lineNum, line in System.IO.File.ReadLines(filename) |> Seq.mapi (fun idx line -> (idx+1),line) do
 let splitLines (lines : string seq) =
     let mkFile n = sprintf "split-output-%03d.sfm" n |> System.IO.File.CreateText
     let mutable outputFileCount = 0
